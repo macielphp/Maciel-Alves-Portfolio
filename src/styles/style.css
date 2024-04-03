@@ -1,0 +1,22 @@
+/* Variaveis */
+@import url(./footer.css);
+@import url(./habilidades.css);
+@import url(./home.css);
+@import url(./navbar.css);
+@import url(./projetos.css);
+@import url(./sobremim.css);
+@import url(./contato.css);
+
+:root {
+    --cor-texto: black;
+    --cor-fundo-navbar:  #ffffff;
+    --cor-texto-navbar: #000000;
+    --cor-destaque: #e3ef0b;
+    --cor-fundo-pagina: rgb(221, 221, 221);
+    
+}
+
+
+
+
+
