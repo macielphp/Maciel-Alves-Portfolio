@@ -8,15 +8,34 @@
 @import url(./contato.css);
 
 :root {
-    --cor-texto: black;
-    --cor-fundo-navbar:  #ffffff;
-    --cor-texto-navbar: #000000;
+    --cor-texto: white;
+    --cor-fundo:  #2b2b2b;
     --cor-destaque: #e3ef0b;
+    --cor-texto-pagina: black;
     --cor-fundo-pagina: rgb(221, 221, 221);
-    
 }
 
-
-
+body {
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto-pagina);
+}
+html, body, section {
+    block-size: 100%;
+  }
+  
+  html {
+    scroll-snap-type: y mandatory;
+  }
+  
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
 
 

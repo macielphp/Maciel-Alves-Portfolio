@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <meta name="description" conte="Digite a descrição da sua página">
-    <title>Document</title>
+    <meta name="description" conte="Acesse o portfólio do Programador Front-End Maciel Alves aqui">
+    <title>Maciel Portfolio</title>
     <link rel="stylesheet" href="./src/styles/style.css">
     <link rel="stylesheet" href="./src/styles/reset.css">
-    <script src="./apps.js"></script>
+    <script src="./apps.js" defer></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="./src/js/swiper.js" defer></script>
 </head>
 <body>
     <!-- Nav bar -->
-    <nav class="navbar" id="sobremim">
+    <nav class="navbar">
         <a href="#home">Home</a>
-        <a class="active" href="#sobremim">Sobre mim</a>
+        <a href="#sobremim">Sobre mim</a>
         <a href="#habilidades">Habilidades</a>
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
     </nav>
 
     <!-- Seção de início -->
-    <section class="home" #id="home"></section>
+    <section class="home" id="home"></section>
         <h1>Maciel lhes dá aos boas-vindas</h1>
 
     <!-- Seção de sobre mim -->
@@ -40,8 +43,121 @@
     </section>
 
     <!-- Seção para projetos -->
-    <section id="projetos">
+    <section  id="projetos">
         <h2>Projetos</h2>
+        <div class="container">
+            <!-- Swiper start -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="card">
+                <div class="card__header">
+                    <img src="./src/projetos/bannerprojeto-calmariaspa.png" class="card__image"  width="100%" height="198px">
+                </div>
+                <div class="card__body">
+                    <div class="card__body__tag">
+                        <span class="tag tag-blue">HTML</span>
+                        <span class="tag tag-blue">CSS</span>
+                        <span class="tag tag-blue">SASS</span>
+                    </div>
+                    <h3>Calmaria Spa</h3> 
+                    <p>O Calmaria Spa foi um projeto fictício em que junto com o instrutor <a target="_blank" href="https://www.linkedin.com/in/diego-carlos-dev/">Diego Carlos Martins</a></p> 
+                </div>
+                <div class="card__footer">
+                    <div class="link">
+                        <a target="_blank" href="https://github.com/macielphp/Calmaria-spa">
+                            <img width="30" height="30" src="./src/projetos/github-logo_icon-icons.com_73546.svg" alt="link__image" class="link__image">
+                        </a>
+                        <a target="_blank" href="https://github.com/macielphp">
+                            <img width="30" height="30" src="./src/projetos/youtube-logo_icon.svg" alt="link__image" class="link__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__header">
+                    <img src="./src/projetos/bannerprojeto-aluramidi.png" alt="card-image" class="card__image" ;  width="100%" height="198px">
+                </div>
+                <div class="card__body">
+                    <div class="card__body__tag">
+                        <span class="tag tag-blue">JavaScript</span>
+                        
+                    </div>
+                    <h3>Alura Midi</h3>
+                    <p>Projeto fictício em que finalizei com o apoio da Instrutora <a href="https://www.linkedin.com/in/vanessametonini/">Vanessa Me Tonini</a> a qual me ensinou a como criar funções no JS; usar condicionais, loops e criar variáveis. O foco deste projeto foi na linguagem JavaScript.</p>
+                </div>
+                <div class="card__footer">
+                    <div class="link">
+                        <a target="_blank" href="https://github.com/macielphp/alura-midi">
+                            <img width="30" height="30" src="./src/projetos/github-logo_icon-icons.com_73546.svg" alt="link__image" class="link__image">
+                        </a>
+                        <a target="_blank" href="https://github.com/macielphp">
+                            <img width="30" height="30" src="./src/projetos/youtube-logo_icon.svg" alt="link__image" class="link__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__header">
+                    <img src="./src/projetos/bannerprojeto-aluravideos.png" alt="card-image" class="iamgem da página incial do projeto alura play" ;  width="100%" height="198px">
+                </div>
+                <div class="card__body">
+                    <div class="card__body__tag">
+                        <span class="tag tag-blue">JavaScript</span>
+                        
+                    </div>
+                    <h3>Alura Play</h3>
+                    <p>Projeto fictício em que finalizei com o apoio do instrutor <a href="https://www.linkedin.com/in/vanessametonini/">Vanessa Me Tonini</a> a qual me ensinou a como criar funções no JS; usar condicionais, loops e criar variáveis. O foco deste projeto foi na linguagem JavaScript.</p>
+                </div>
+                <div class="card__footer">
+                    <div class="link">
+                        <a target="_blank" href="https://github.com/macielphp/alura-midi">
+                            <img width="30" height="30" src="./src/projetos/github-logo_icon-icons.com_73546.svg" alt="link__image" class="link__image">
+                        </a>
+                        <a target="_blank" href="https://github.com/macielphp">
+                            <img width="30" height="30" src="./src/projetos/youtube-logo_icon.svg" alt="link__image" class="link__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__header">
+                    <a target="_blank" href="https://weva-cast.vercel.app/">    
+                        <img src="./src/projetos/bannerprojeto-wavecast.png" alt="card-image" class="iamgem da página incial do projeto alura play" ;  width="100%" height="198px">
+                    </a>
+                </div>
+                <div class="card__body">
+                    <div class="card__body__tag">
+                        <span class="tag tag-blue">JavaScript</span>
+                        
+                    </div>
+                    <h3>WaveCast</h3>
+                    <p>Projeto fictício em que finalizei com o apoio do instrutor <a href="https://www.linkedin.com/in/vanessametonini/">Vanessa Me Tonini</a> a qual me ensinou a como criar funções no JS; usar condicionais, loops e criar variáveis. O foco deste projeto foi na linguagem JavaScript.</p>
+                </div>
+                <div class="card__footer">
+                    <div class="link">
+                        <a target="_blank" href="https://github.com/macielphp/WevaCast">
+                            <img width="30" height="30" src="./src/projetos/github-logo_icon-icons.com_73546.svg" alt="link__image" class="link__image">
+                        </a>
+                        <a target="_blank" href="https://github.com/macielphp">
+                            <img width="30" height="30" src="./src/projetos/youtube-logo_icon.svg" alt="link__image" class="link__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
         
     <!-- Seção para contatos -->
@@ -52,7 +168,7 @@
     <footer id="footer">
         <span>FOOTER</span>
     </footer>
-    <!-- JAVASCRIPT -->
-    <script src="./src/js/app.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
