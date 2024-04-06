@@ -13,6 +13,8 @@
     --cor-destaque: #e3ef0b;
     --cor-texto-pagina: black;
     --cor-fundo-pagina: rgb(221, 221, 221);
+    --fs-title-section: 40px;
+    --fs-h1: 50px;
 }
 
 body {
