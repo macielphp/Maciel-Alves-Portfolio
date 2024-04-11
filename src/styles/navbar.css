@@ -1,25 +1,27 @@
-/* add a black backgroundcolor to the top navagation */
+/* Estilos para o navbar */
 .navbar {
     overflow: hidden;
     background-color: var(--cor-fundo);
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000; /* Aumentei o z-index para garantir que fique acima do conteúdo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra para separar o navbar do conteúdo */
 }
 
 /* Estilize os links dentro da barra de navegação */
 .navbar a {
-    float: left;
-    display: block;
+    display: inline-block;
     color: var(--cor-texto);
     text-align: center;
-    padding: 14px 16px;
+    padding: 1em;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s; /* Adicionei uma transição suave para as mudanças de cor */
 }
 
 /* Mude a cor dos links quando o mouse estiver sobreposto */
-.navbar a:hover{
-    background-color: var(--cor-fundo-navbar);
-    color: var(--cor-destaque);
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Alterei a cor de fundo para um tom mais claro */
+    color: var(--cor-destaque); /* Mantive a cor do texto como a cor de destaque definida */
 }

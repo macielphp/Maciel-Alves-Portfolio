@@ -1,0 +1,14 @@
+#footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 2em 0;
+    position: relaative;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer span {
+    font-size: 1em;
+    font-weight: 500;
+}

@@ -1,6 +1,23 @@
 #sobremim{
-    background-color: #b56d6d;
-    width: 100%;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 7em 10em;
+    gap: 1em;
+    gap: 3em;
+}
+.sobremim__text-flexbox {
+    display: flex;
+    flex-direction: column;
+    gap: 2em 0;
+}
 
+.sobremim__text-flexbox h2 {
+    font-size: 3em;
+    font-weight: 700;
+
+}
+.sobremim__text-flexbox p {
+    font-size: 1.2em;
 }

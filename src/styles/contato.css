@@ -1,6 +1,64 @@
 #contato {
-    background-color: rgb(32, 57, 81);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 10em;
+    gap: 2em;
+}
+
+#contato h2 {
+    font-size: var(--fs-title-section);
+    font-weight: 700;
+}
+
+#contact-form {
     width: 100%;
-    height: 100vh;
-    padding: 100px;
+    max-width: 500px;
+    background-color: var(--cor-fundo);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    color: white;
+
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    background-color: var(--cor-destaque);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #c5d60e;
 }

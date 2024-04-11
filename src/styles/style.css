@@ -21,23 +21,10 @@ body {
     background-color: var(--cor-fundo-pagina);
     color: var(--cor-texto-pagina);
 }
-html, body, section {
-    block-size: 100%;
-  }
-  
-  html {
-    scroll-snap-type: y mandatory;
-  }
-  
-  section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   
   
+/* Responsive design */
+/* tablet */
 
 

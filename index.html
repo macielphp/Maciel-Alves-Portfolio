@@ -6,7 +6,7 @@
     <meta name="description" conte="Acesse o portfólio do Programador Front-End Maciel Alves aqui">
     <title>Maciel Portfolio</title>
     <link rel="stylesheet" href="./src/styles/style.css">
-    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/maciel-reset.css">
     <script src="./apps.js" defer></script>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -24,75 +24,139 @@
 
     <!-- Seção de início -->
     <section id="home">
-        <h1>Me chamo Maciel.</h1>
-        <p>É um prazer te receber aqui</p>
+        <div class="home__text-flexbox">
+            <h1>Me chamo Maciel.</h1>
+            <p>E é um prazer te receber aqui!</p>
+        </div>
+        <img src="./src/imagens/banner-ai.jpg" alt="imagem gerado por AI de um homem programando" width="400px" height="400px">
     </section>
 
     <!-- Seção de sobre mim -->
     <section class="sobremim" id="sobremim">
-        <h2>Maciel</h2>
-    
+        <img src="./src/imagens/banner-ai-sobremim.jpg" width="400px" height="400px" alt="">
+        <div class="sobremim__text-flexbox">
+            <h2>Sobre mim</h2>
+            <p>Primeiro, um curioso e questionador das coisas, em segundo estou na área de programação voltada ao Front-end. Estou me formando em Análise e desenvolvimento de sistemas e pretendo adentrar ainda mais nas áreas de programação para atender as demandas do mercado como Freelancer global/Prestador de serviço.</p>
+        </div>
     </section>
     <section id="habilidades">
         <h2>Habilidades</h2>
-            <div>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Sass</span>
-                <span>Git</span>
+            <div class="habilidades__flexbox">
+                <img src="./src/imagens/html.ico" width="80" height="80" alt="html icon">
+                <img src="./src/imagens/css.png" width="80" height="80" alt="css icon">
+                <img src="./src/imagens/javascript.svg" width="80" height="80" alt="javascript icon">
+                <img src="./src/imagens/github-logo_icon-icons.com_73546.svg" width="80" height="80" alt="github icon">
+                <img src="./src/imagens/git.ico" width="80" height="80" alt="git icon">
             </div>
+            
     </section>
 
     <!-- Seção para projetos -->
-    <section  id="projetos">
+    <section id="projetos">
         <h2>Projetos</h2>
-        <!-- Swiper start -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="card__header">
-                        <img src="./src/projetos/bannerprojeto-aluramidi.png" alt="card-image" class="card__image" ;  width="100%" height="198px">
-                    </div>
-                    <div class="card__body">
-                        <div class="card__body__tag">
-                            <span class="tag tag-blue">JavaScript</span>
-                        </div>
-                        <h3>Alura Midi</h3>
-                        <p>Projeto fictício em que finalizei com o apoio da Instrutora <a href="https://www.linkedin.com/in/vanessametonini/">Vanessa Me Tonini</a> a qual me ensinou a como criar funções no JS; usar condicionais, loops e criar variáveis. O foco deste projeto foi na linguagem JavaScript.</p>
-                    </div>
-                    <div class="card__footer">
-                        <div class="card__footer__link">
-                            <!-- <a target="_blank" href="https://github.com/macielphp/alura-midi">
-                                <img ; width="30" height="30" ; src="./src/projetos/github-logo_icon-icons.com_73546.svg" alt="logo do github" class="link__image">
-                            </a>
-                            <a target="_blank" href="https://github.com/macielphp">
-                                <img width="30" height="30" src="./src/projetos/youtube-logo_icon.svg" alt="link__image" class="link__image">
-                            </a> -->
+        <div class="projetos__flex-container">
+            <div class="projetos__flex-container__item">
+                <img class="imagem" width="310" height="180" src="./src/imagens/bannerprojeto-calmariaspa.png" alt="banner do projeto Calmaria Spa">
+                <div class="escondido">
+                    <div class="escondido__container">
+                        <a target="_blank" href="https://github.com/macielphp/Calmaria-spa">
+                            <img src="./src/imagens/github-logo_icon-icons.com_73546.svg" width="80px" height="80px" alt="svg do github">
+                            
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">Projeto em breve</div>
-            <div class="swiper-slide">Projeto em breve</div>
-            <div class="swiper-slide">Projeto em breve</div>
-            <div class="swiper-slide">Projeto em breve</div>
-            <div class="swiper-slide">Projeto em breve</div>
-            <div class="swiper-slide">Projeto em breve</div>
-            <div class="swiper-slide">Projeto em breve</div>
-            <div class="swiper-slide">Projeto em breve</div>
-        </div>
-        <div class="swiper-pagination">
-            
+            <div class="projetos__flex-container__item">
+                <img class="imagem" width="310" height="180" src="./src/imagens/bannerprojeto-alurabooks.png" alt="banner do projeto Alura books">
+                <div class="escondido">
+                    <div class="escondido__container">
+                        <a target="_blank" href="https://github.com/macielphp/alura-book">
+                            <img src="./src/imagens/github-logo_icon-icons.com_73546.svg" width="80px" height="80px" alt="svg do github">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="projetos__flex-container__item">
+                <img class="imagem" width="310" height="180" src="./src/imagens/bannerprojeto-aluravideos.png" alt="banner do projeto Alura videos">
+                <div class="escondido">
+                    <div class="escondido__container">
+                        <a target="_blank" href="https://github.com/macielphp/alura-videos  ">
+                            <img src="./src/imagens/github-logo_icon-icons.com_73546.svg" width="80px" height="80px" alt="svg do github">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="projetos__flex-container__item">
+                <img class="imagem" width="310" height="180" src="./src/imagens/bannerprojeto-aluramidi.png" alt="banner do projeto alura midi">
+                <div class="escondido">
+                    <div class="escondido__container">
+                        <a target="_blank" href="https://github.com/macielphp/alura-midi">
+                            <img src="./src/imagens/github-logo_icon-icons.com_73546.svg" width="80px" height="80px" alt="svg do github">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="projetos__flex-container__item">
+                <img class="imagem" width="310" height="180" src="./src/imagens/bannerprojeto-wavecast.png" alt="banner do projeto WaveCast">
+                <div class="escondido">
+                    <div class="escondido__container">
+                        <a target="_blank" href="https://github.com/macielphp/WevaCast">
+                            <img src="./src/imagens/github-logo_icon-icons.com_73546.svg" width="80px" height="80px" alt="svg do github">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="projetos__flex-container__item">
+                <img class="imagem" width="310" height="180" src="./src/imagens/bannerprojeto-culturama.png" alt="banner do projeto cultura">
+                <div class="escondido">
+                    <div class="escondido__container">
+                        <a target="_blank" href="https://github.com/macielphp/Culturama">
+                            <img src="./src/imagens/github-logo_icon-icons.com_73546.svg" width="80px" height="80px" alt="svg do github">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="projetos__flex-container__item">
+                <img class="imagem" width="310" height="180" src="./src/imagens/bannerprojeto-numerosecreto.png" alt="banner do projeto número secreto">
+                <div class="escondido">
+                    <div class="escondido__container">
+                        <a target="_blank" href="https://github.com/macielphp/jogo-do-numero-secreto">
+                            <img src="./src/imagens/github-logo_icon-icons.com_73546.svg" width="80px" height="80px" alt="svg do github">  
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    
         
     <!-- Seção para contatos -->
     <section id="contato">
         <h2>Contatos</h2>
+        <form id="contact-form" method="post" action="submit.php">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required placeholder="Nome e sobrenome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Digite sua mensagem aqui."></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <footer id="footer">
-        <span>FOOTER</span>
+        <span>© 2024 Maciel Alves. Todos os direitos reservados.</span>
     </footer>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
