@@ -6,9 +6,11 @@
     padding: 7em 20em;
     column-gap: 3em;
 }
-home__text-flexbox {
+.home__text-flexbox {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+
 }
 .home__text-flexbox h1 {
     font-size: var(--fs-h1);
@@ -17,4 +19,17 @@ home__text-flexbox {
 
 .home__text-flexbox p {
     font-size: 2em;
+}
+.botao {
+    margin-top: 1rem;
+    max-width: fit-content;
+    padding: .6rem;
+    border-radius: 2rem;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+.botao:hover{
+    background-color: var(--cor-destaque);
+    color: initial;
 }
