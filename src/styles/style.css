@@ -17,14 +17,12 @@
     --fs-h1: 50px;
 }
 
-body {
+body{
     background-color: var(--cor-fundo-pagina);
     color: var(--cor-texto-pagina);
+    width: 100%;
 }
 
-  
-  
-/* Responsive design */
-/* tablet */
 
+ 
 

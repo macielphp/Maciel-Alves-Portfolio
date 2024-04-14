@@ -19,10 +19,10 @@
         <a class="navbar__link" href="#habilidades">Habilidades</a>
         <a class="navbar__link" href="#projetos">Projetos</a>
         <a class="navbar__link" href="#contato">Contato</a>
-        <a class="navbar__overlay-bt" href="#">
+        <a class="navbar__overlay-bt " target="_blank" href="https://www.linkedin.com/in/imacielalves/">
             <img class="navbar__overlay-bt__icon" src="./src/imagens/linkedin.svg" alt="icone svg do linkedin para acessar perfil de Maciel Alves">
         </a>
-        <a class="navbar__overlay-bt" href="#">
+        <a class="navbar__overlay-bt" target="_blank" href="https://www.instagram.com/macielalves03/?hl=en">
             <img class="navbar__overlay-bt__icon" src="./src/imagens/instagram.svg" alt="icone svg do linkedin para acessar perfil de Maciel Alves">
         </a>
     </nav>
@@ -44,6 +44,7 @@
             <h1>Me chamo Maciel.</h1>
             <p>E é um prazer te receber aqui!</p>
             <a class="botao" href="https://docs.google.com/document/d/1PUnSupijwXm768LndnnRR0xfCxVyz6sH6pYoR8d6da0/edit?usp=sharing" target="_blank">Baixar CV</a>
+
         </div>
         <img src="./src/imagens/banner-ai.jpg" alt="imagem gerado por AI de um homem programando" >
     </section>
@@ -154,8 +155,8 @@
         
     <!-- Seção para contatos -->
     <section id="contato">
-        <h2>Contatos</h2>
-        <form id="contact-form" method="post" action="submit.php">
+        <h2>Contato</h2>
+        <form id="contact-form" method="POST" action="https://formsubmit.co/macielalvescontato@gmail.com" method="post">
             <div class="form-group">
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required placeholder="Nome e sobrenome">
@@ -173,7 +174,17 @@
     </section>
 
     <footer id="footer">
-        <span>© 2024 Maciel Alves. Todos os direitos reservados.</span>
+        <div class="footer__copy-right">
+            <span>© 2024 Maciel Alves. Todos os direitos reservados.</span>
+        </div>
+        <div class="footer__redes-sociais">
+            <a href="#">
+                <img src="./src/imagens/linkedin.svg" alt="icone svg de linkedin para acessar perfil de Maciel Alves">
+            </a>
+            <a href="#">
+                <img src="./src/imagens/instagram.svg" alt="icone svg do instagram para acessar perfil de Maciel Alves">
+            </a>
+        </div>
     </footer>
     
 </body>

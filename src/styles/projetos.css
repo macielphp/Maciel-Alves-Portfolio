@@ -4,12 +4,13 @@
   justify-content: center;
   align-items: center;
   padding: 4em 4em;
+  gap: 1em;
 }
 
 #projetos h2 {
   font-size: 3em;
   font-weight: 700;
-  margin-bottom: 1em;
+  
   text-align: center;
   color: var(--fs-title-section);
 }
@@ -62,4 +63,10 @@
 
 .projetos__flex-container__item:hover .escondido {
   opacity: 1;
+}
+
+@media screen and (max-width: 800px){
+  .projetos__flex-container {
+    gap: 1em
+  }
 }

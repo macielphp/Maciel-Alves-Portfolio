@@ -5,6 +5,8 @@
     flex-direction: row;
     padding: 7em 13em;
     column-gap: 3em;
+    width: 100%;
+    overflow: hidden;
 }
 #home img {
     width: 400px;
@@ -22,7 +24,7 @@
 }
 
 .home__text-flexbox p {
-    font-size: 2em;
+    font-size: 19.2px;
 }
 .botao {
     margin-top: 1rem;
@@ -50,6 +52,23 @@
 @media screen and (max-width: 800px) {
     #home {
         flex-direction: column;
-        padding: 7em 4em;
+        padding: 7em 0;
     }
+    #home img{
+        min-width: 13.5em;
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    #home {
+        padding: 4em 2em 2em 2em;
+    }
+   .home__text-flexbox h1{
+    font-size: 40px
+   }
+   .home__text-flexbox p {
+    font-size: 1.2em;
+}
 }

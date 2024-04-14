@@ -45,11 +45,11 @@
     .navbar__overlay-bt{
         display: inline;
         color: var(--cor-texto);
-        padding: 1em;
+        padding: .4em;
     }
     .navbar__overlay-bt__icon{
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         fill: rgb(255,0,0);
     }
     .overlay-nav {
@@ -93,8 +93,8 @@
     
     .overlay-nav .closebtn {
       position: absolute;
-      top: 120px;
-      right: 45px;
+      top: 50px;
+      left: 5px;
       font-size: 60px;
       color: var(--cor-destaque);
     }
@@ -105,7 +105,7 @@
     .overlay-nav a {font-size: 20px}
     .overlay-nav .closebtn {
     font-size: 40px;
-    top: 15px;
-    right: 35px;
+    top: 70px;
+    left: 10px;
     }
 }

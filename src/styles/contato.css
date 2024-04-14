@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4em 10em;
+    padding: 64px 380px;
     gap: 2em;
+    font-size: 19.2px;
 }
 
 #contato h2 {
@@ -13,9 +14,8 @@
 
 #contact-form {
     width: 100%;
-    max-width: 500px;
     background-color: var(--cor-fundo);
-    padding: 2em;
+    padding: 32px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -49,10 +49,10 @@
 button[type="submit"] {
     width: 100%;
     padding: 0.8em;
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 600;
-    color: white;
-    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -60,5 +60,26 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #c5d60e;
+    background-color: var(--cor-destaque);
+}
+@media screen and (max-width: 1024px) {
+    #contato{
+        padding: 6% 10%;
+        gap: 1em;
+    } 
+}
+
+@media screen and (max-width: 800px){
+    #contato{
+        padding: 6% 10%;
+    } 
+  
+}
+@media screen and (max-width: 425px) {
+    #contato {
+        padding: 6% 5%;
+    }
+    #contact-form {
+        padding: 16px;
+    }
 }
