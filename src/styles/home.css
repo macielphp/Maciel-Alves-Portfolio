@@ -3,8 +3,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: 7em 20em;
+    padding: 7em 13em;
     column-gap: 3em;
+}
+#home img {
+    width: 400px;
+    height: 400px;
 }
 .home__text-flexbox {
     display: flex;
@@ -32,4 +36,20 @@
 .botao:hover{
     background-color: var(--cor-destaque);
     color: initial;
+}
+@media screen and (max-width: 1024px) {
+    #home {
+        flex-direction: column;
+        padding: 7em 10em;
+    }
+    .home__text-flexbox h1 {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #home {
+        flex-direction: column;
+        padding: 7em 4em;
+    }
 }

@@ -7,20 +7,36 @@
     <title>Maciel Portfolio</title>
     <link rel="stylesheet" href="./src/styles/style.css">
     <link rel="stylesheet" href="./src/styles/maciel-reset.css">
-    <script src="./apps.js" defer></script>
-    <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="./src/js/swiper.js" defer></script>
+    <script src="./src/js/app.js" defer></script>
 </head>
 <body>
     <!-- Nav bar -->
     <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#sobremim">Sobre mim</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
+        <span class="navbar__overlay-bt" style="font-size:30px ;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <a class="navbar__link" href="#home">Home</a>
+        <a class="navbar__link" href="#sobremim">Sobre mim</a>
+        <a class="navbar__link" href="#habilidades">Habilidades</a>
+        <a class="navbar__link" href="#projetos">Projetos</a>
+        <a class="navbar__link" href="#contato">Contato</a>
+        <a class="navbar__overlay-bt" href="#">
+            <img class="navbar__overlay-bt__icon" src="./src/imagens/linkedin.svg" alt="icone svg do linkedin para acessar perfil de Maciel Alves">
+        </a>
+        <a class="navbar__overlay-bt" href="#">
+            <img class="navbar__overlay-bt__icon" src="./src/imagens/instagram.svg" alt="icone svg do linkedin para acessar perfil de Maciel Alves">
+        </a>
     </nav>
+    <div id="myNav" class="overlay-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-nav-content">
+          <a href="#home">Home</a>
+          <a href="#sobremim">Sobre mim</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+        </div>
+      
+    </div>
 
     <!-- Seção de início -->
     <section id="home">
@@ -29,7 +45,7 @@
             <p>E é um prazer te receber aqui!</p>
             <a class="botao" href="https://docs.google.com/document/d/1PUnSupijwXm768LndnnRR0xfCxVyz6sH6pYoR8d6da0/edit?usp=sharing" target="_blank">Baixar CV</a>
         </div>
-        <img src="./src/imagens/banner-ai.jpg" alt="imagem gerado por AI de um homem programando" width="400px" height="400px">
+        <img src="./src/imagens/banner-ai.jpg" alt="imagem gerado por AI de um homem programando" >
     </section>
 
     <!-- Seção de sobre mim -->
@@ -159,7 +175,6 @@
     <footer id="footer">
         <span>© 2024 Maciel Alves. Todos os direitos reservados.</span>
     </footer>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
 </body>
 </html>
