@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.section {
+  padding: 2em;
+  background-color: var(--background);
+  max-width: 65em;
+  margin: 0 auto;
+}
+.section .section__intro-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.section .section__intro-banner .intro-banner__text-content {
+  max-width: 33em;
+  flex: 1;
+  margin-right: 2em;
+}
+.section .section__intro-banner .intro-banner__text-content .text-content__title {
+  margin-bottom: 1rem;
+  font-size: 2em;
+  font-family: var(--font-family);
+  font-weight: semi-bold;
+  color: var(--white);
+}
+.section .section__intro-banner .intro-banner__text-content .text-content__title .title__highlight {
+  color: var(--primary) !important;
+}
+.section .section__intro-banner .intro-banner__text-content .text-content__description {
+  color: var(--gray);
+  font-family: var(--font-family);
+  font-weight: 400; /* Ajuste se necessário */
+}
+.section .section__intro-banner .intro-banner__image-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+.section .section__intro-banner .background-dots {
+  position: absolute;
+  top: 200px;
+  right: 150px;
+  width: 84px;
+  height: 84px;
+  background-image: url(/src/components/IntroBanner/assets/dots.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  z-index: -1;
+  color: var(--white);
+}/*# sourceMappingURL=style.css.map */

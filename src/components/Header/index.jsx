@@ -1,6 +1,6 @@
 import './style.css'
 import Logo from './assets/logo.svg'
-import StyledMenu from '../Lang-switcher'
+import StyledMenu from '../LangSwitcher'
 const Header = () => {
     return (
         <>
