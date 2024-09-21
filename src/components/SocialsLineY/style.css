@@ -1,0 +1,18 @@
+.SocialsLineY {
+  top: 0px;
+  left: 60px;
+  z-index: 0;
+  background-image: url("./assets/vertical-line.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 191px;
+}
+.SocialsLineY .SocialsLineY__icons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 180px;
+  padding-top: 20px;
+  gap: 1em;
+}/*# sourceMappingURL=style.css.map */

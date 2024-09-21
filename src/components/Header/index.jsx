@@ -1,9 +1,10 @@
 import './style.css'
 import Logo from './assets/logo.svg'
 import LangSwitcher from '../LangSwitcher'
+
 const Header = () => {
     return (
-        <>
+        <>  
             <header>
                 <nav className="header">
                     <div className="header__logo">
