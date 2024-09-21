@@ -6,7 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Flag from 'react-world-flags'; // Importa o componente de bandeiras
 
-const StyledMenu = styled((props) => (
+const LangSwitcher = styled((props) => (
   <Menu
     elevation={0}
     anchorOrigin={{
@@ -82,7 +82,7 @@ export default function CustomizedMenus() {
       >
       Lang
       </Button>
-      <StyledMenu
+      <LangSwitcher
         id="demo-customized-menu"
         MenuListProps={{
           'aria-labelledby': 'demo-customized-button',
@@ -104,7 +104,7 @@ export default function CustomizedMenus() {
         <MenuItem onClick={handleClose} disableRipple>
           <Flag code="FR" style={{ width: 25, marginRight: 10 }} /> FRA
         </MenuItem>
-      </StyledMenu>
+      </LangSwitcher>
     </div>
   );
 }

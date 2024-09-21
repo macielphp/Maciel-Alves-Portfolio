@@ -1,6 +1,6 @@
 import './style.css'
 import Logo from './assets/logo.svg'
-import StyledMenu from '../LangSwitcher'
+import LangSwitcher from '../LangSwitcher'
 const Header = () => {
     return (
         <>
@@ -23,7 +23,7 @@ const Header = () => {
                         <li className="header__list__item">
                             <a href="#">contacts</a>
                         </li>
-                        <StyledMenu /> 
+                        <LangSwitcher /> 
                     </ul>
                 </nav>
             </header>

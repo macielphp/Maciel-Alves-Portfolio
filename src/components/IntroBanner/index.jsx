@@ -17,7 +17,7 @@ const IntroBanner = () => {
                         He crafts responsive websites where technologies meet creativity.
                     </p>
                     <Button 
-                        borderColor='var(--primary)' 
+                        bordercolor='var(--primary)' 
                         onClick={() => console.log('Button clicked!')}
                     >
                         Contact me!
