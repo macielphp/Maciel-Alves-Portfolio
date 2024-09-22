@@ -1,0 +1,55 @@
+.quote {
+    
+    color: var(--gray);
+    font-size: 24px;
+    
+    display: flex;
+    flex-direction: column;
+
+    margin: 1em auto;
+    width:  700px;
+
+    .quote__q{
+        width: 100%;
+        border: 2px solid var(--gray);
+        padding: 1em;
+        font-weight: 700;
+        position: relative;
+        align-self: flex-end;
+        text-align: center;
+
+    }
+    .quote__q::before {
+        content: "";
+        position: absolute; /* Para garantir que o conteúdo respeite o padding */
+        background-image: url('./assets/aspas.svg');
+        background-position: top; /* Posiciona o ícone um pouco acima e à esquerda */
+        background-repeat: no-repeat;
+        background-size: contain; /* Ajusta o tamanho do ícone */
+        width: 25px;
+        height: 25px;
+        transform: translate(0%, -40%);
+        top: 0px;
+    }
+
+    .quote__author{
+        border: 2px solid var(--gray);
+        padding: 1em;
+        font-weight: 500;
+        position: relative;
+        align-self: flex-end;
+        text-align: center;
+    }
+    .quote__author::after{
+        content: "";
+        position: absolute; /* Para garantir que o conteúdo respeite o padding */
+        background-image: url('./assets/aspas.svg');
+        background-position: top; /* Posiciona o ícone um pouco acima e à esquerda */
+        background-repeat: no-repeat;
+        background-size: contain; /* Ajusta o tamanho do ícone */
+        width: 25px;
+        height: 25px;
+        transform: translate(0%, -40%);
+        top: 0px;
+    }
+}
