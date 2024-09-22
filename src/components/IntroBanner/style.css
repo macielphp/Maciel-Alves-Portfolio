@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .section {
   padding: 2em;
   background-color: var(--background);
@@ -29,7 +28,8 @@
 .section .section__intro-banner .intro-banner__text-content .text-content__description {
   color: var(--gray);
   font-family: var(--font-family);
-  font-weight: 400; /* Ajuste se necessário */
+  font-weight: 400;
+  margin-bottom: 1em;
 }
 .section .section__intro-banner .intro-banner__image-content {
   flex: 1;
