@@ -1,4 +1,4 @@
-.intro-banner {
+.profile-banner {
   padding: 2em;
   background-color: var(--background);
   max-width: 65em;
@@ -8,33 +8,36 @@
   align-items: center;
   position: relative;
 }
-.intro-banner .intro-banner__text-content {
+.profile-banner .profile-banner__text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   max-width: 33em;
   flex: 1;
   margin-right: 2em;
 }
-.intro-banner .intro-banner__text-content .text-content__title {
+.profile-banner .profile-banner__text-content .text-content__title {
   margin-bottom: 1rem;
   font-size: 2em;
   font-family: var(--font-family);
   font-weight: semi-bold;
   color: var(--white);
 }
-.intro-banner .intro-banner__text-content .text-content__title .title__highlight {
+.profile-banner .profile-banner__text-content .text-content__title .title__highlight {
   color: var(--primary) !important;
 }
-.intro-banner .intro-banner__text-content .text-content__description {
+.profile-banner .profile-banner__text-content .text-content__description {
   color: var(--gray);
   font-family: var(--font-family);
   font-weight: 400;
   margin-bottom: 1em;
 }
-.intro-banner .intro-banner__image-content {
+.profile-banner .profile-banner__image-content {
   flex: 1;
   position: relative;
   z-index: 1;
 }
-.intro-banner .background-dots {
+.profile-banner .background-dots {
   position: absolute;
   top: 200px;
   right: 150px;

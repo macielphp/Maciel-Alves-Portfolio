@@ -1,6 +1,6 @@
 .title-true{
     display: flex;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
@@ -17,7 +17,7 @@
     font-size: 32px;
     font-weight: 600;
     color: var(--white);
-
+    font-family: var(--font-family);
 }
 .title-h2::before{
     content: "#";

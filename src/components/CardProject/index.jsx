@@ -39,7 +39,7 @@ const CardProject = ({ title, description, technologies, githubUrl, imageUrl, im
             <div className='card-project__body'>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <AncorButton href={githubUrl} icon={ GoCodeSquare }>GitHub</AncorButton>
+                <AncorButton href={githubUrl} icon={ GoCodeSquare } borderColor={'var(--gray)'}>GitHub</AncorButton>
 
             </div>
         </div>

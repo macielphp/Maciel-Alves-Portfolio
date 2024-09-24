@@ -1,4 +1,4 @@
-.intro-banner {
+.profile-banner {
     padding: 2em;
     background-color: var(--background);
     max-width: 65em;
@@ -9,10 +9,14 @@
     position: relative;
     
 
-    .intro-banner__text-content {
+    .profile-banner__text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         max-width: 33em;
         flex: 1;
         margin-right: 2em;
+
     
         .text-content__title {
             margin-bottom: 1rem;
@@ -32,7 +36,7 @@
             
         }
     }
-    .intro-banner__image-content {
+    .profile-banner__image-content {
         flex: 1;
         position: relative;
         z-index: 1;
