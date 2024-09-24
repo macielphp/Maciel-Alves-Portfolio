@@ -1,0 +1,9 @@
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em;
+    max-width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}

@@ -3,18 +3,20 @@ import { styled } from '@mui/material/styles';
 
 const StyledImage = styled('img')({
     maxWidth: '100%',
-    width: '375px',
-    height: '375px',
+    width: 'auto',
+    height: '100%',
+
 })
 
 
-const Picture = ({ imageSrc, imageAlt}) => {
+const Picture = ({ className, imageSrc, imageAlt }) => {
     return(
-        <StyledImage src={imageSrc} alt={imageAlt}/>
+        <StyledImage className={className} src={imageSrc} alt={imageAlt}/>
     )
 }
 
 Picture.propTypes = {
+    className: PropTypes.string,
     imageSrc: PropTypes.string.isRequired,
     imageAlt: PropTypes.string.isRequired,
 }

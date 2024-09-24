@@ -1,4 +1,4 @@
-import './style.css';
+
 import ButtonMaterial from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
@@ -13,7 +13,7 @@ const StyledButton = styled(ButtonMaterial)(({ bordercolor }) => ({
   const Button = ({ onClick, bordercolor, icon: Icon, children }) => {
     return (
         <StyledButton onClick={onClick} bordercolor={bordercolor} variant="outlined">
-            {Icon && <Icon style={{ marginRight: 8 }} />} {/* Adiciona o ícone se existir */}
+            {Icon && <Icon style={{ marginRight: 2 }} />} {/* Adiciona o ícone se existir */}
             {children} {/* Renderiza os filhos aqui */}
         </StyledButton>
     );
