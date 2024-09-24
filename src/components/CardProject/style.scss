@@ -2,7 +2,9 @@
     background-color: inherit;
     border: 1px solid var(--gray);
     width: 331px;
-
+    height: auto;
+    display: flex;
+    flex-direction: column;
     .card-project__stack{
         border-width: 1px;
         border-style: none none solid none;
