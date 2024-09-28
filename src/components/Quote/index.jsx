@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import './style.css'
-import PropTypes from 'prop-types';
 
 const Quote = ( { quote, author })  => {
     return (
@@ -8,11 +8,6 @@ const Quote = ( { quote, author })  => {
                 <p className='quote__author'>- {author}</p>
             </div>
     )
-}
-
-Quote.propTypes = {
-    quote: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
 }
 
 export default Quote;

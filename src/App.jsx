@@ -6,25 +6,52 @@ import Quote from './components/Quote';
 import Title from './components/Title';
 import CardProject from './components/CardProject';
 import './App.css'
-import AncorButton from './components/AncorButton';
+
+
 
 function App() {
   
   const [projects, setProjects] = useState([])
+  const [profile, setProfile] = useState({})
+  const [quote, setQuote] = useState([])
+  const [about, setAbout] = useState([])
 
   useEffect(() => {
-    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/f4e4e8ea495a385b3ccbcd4804baaa526d511033/gistfile1.txt';
+    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/621780de918d9798477696ca974e32006d0bd5ed/gistfile1.txt';
   
     fetch(gistUrl)
-      .then(response => {
-        console.log('Resposta bruta:', response);
-        return response.text(); // Usar 'text' para ver o conteúdo como string
-      })
+      .then(response => response.text())
       .then(text => {
-        console.log('Conteúdo bruto:', text); // Mostra o JSON como texto
         try {
-          const data = JSON.parse(text); // Tenta fazer o parse do texto
-          setProjects(data.project);
+          const data = JSON.parse(text); 
+
+          setProfile(data.profile || {
+            title: 'Título não disponível',
+            description: 'Descrição não disponível',
+            callToActButtonText: 'Texto não disponível',
+            imageSrc: 'URL não disponível',
+            imageAlt: 'Texto alternativo não disponível'
+          });
+          
+          if (data.phrases && data.phrases.length > 0) {
+            setQuote(data.phrases[0]); 
+          } else {
+            console.log('Nenhuma citação encontrada.');
+            setQuote({ quote: 'Citação não disponível.', author: 'Autor desconhecido' });
+          }
+          setProjects(data.projects || []);
+       
+          if (data.about && data.about.length > 0){
+            setAbout(data.about[0])
+          } else{
+            console.log('Nenhum dado de "about" encontrado.');
+            setAbout({
+              professionalSummary: 'Resumo profissional não disponível.',
+              imageUrl: 'URL não disponível',
+              imageAlt: 'Texto alternativo não disponível'
+            });
+          }
+
         } catch (error) {
           console.error('Erro ao fazer o parse do JSON:', error);
         }
@@ -37,16 +64,17 @@ function App() {
       <Header />
       <SocialsLineY />
       <ProfileBanner 
-        title={'Maciel is a front-end developer'}
-        description={'He crafts responsive websites where technologies meet creativity'}
-        callToActButtonText={'Contact me!!'}
-        imageSrc={'../public/test.png'}
-        imageAlt={'Photo of Maciel from the waist up, wearing black plastic glasses, dressed in a black shirt, with a light yellow background.'}
+        title={profile.title}
+        description={profile.description}
+        callToActButtonText={profile.callToActButtonText}
+        imageUrl={profile.imageUrl}
+        imageAlt={profile.imageAlt}
         borderColor={'var(--primary)'}
+        ancorButtonTo={'mailto:macielalvescontato@gmail.com'}
       />
       <Quote 
-        quote='With great power comes great electricity bill.'
-        author='Dr. Who'
+        quote={quote.quote}
+        author={quote.author}
       />
       
       <Title titleType='h2' titleText='project' showViewAll='true' />
@@ -65,10 +93,17 @@ function App() {
           />
         ))}
       </section>
-
-      <Title titleType='h2' titleText='skills'/>
-      <p>I am a self-taught student who transforms knowledge into practice through projects like the Beneficent Association and Human Development. Determined to learn from challenges, I seek knowledge beyond Front-end development to always know a little more, as I am sure that curiosity, continuous learning, teaching, and discipline in execution make me a promising candidate to integrate and contribute meaningfully to a team of developers.</p>
-      <AncorButton>Read more </AncorButton>
+      <section className='section-p'>
+        <Title titleType='h2' titleText='about-me'/>
+        <ProfileBanner
+          description={about.professionalSummary}
+          imageUrl="public/beautiful-office-space-cartoon-style.jpg"
+          callToActButtonText={'Read More'}
+          borderColor={'var(--primary)'}
+          ancorButtonTo={'https://www.youtube.com/@MultiplyWithMaciel'}
+        />
+        
+      </section>
    
     </>
   )

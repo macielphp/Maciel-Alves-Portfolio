@@ -6,12 +6,18 @@
     justify-content: space-between;
     position: relative;
 }
+.title-container{
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
 .title-false{
     display: flex;
-    max-width: 80%;
+    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
     align-items: center;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
 }
 .title-h2{
     font-size: 32px;
@@ -27,7 +33,7 @@
 .title-line{
     margin-left: 16px;
     height: 2px;
-    width: 30%;
+    width: 33%;
     border:none;
     background-color: var(--primary);
     justify-self: self-start;

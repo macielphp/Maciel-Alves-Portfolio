@@ -1,4 +1,4 @@
-import React from 'react';  // Adiciona a importação de React
+import React from 'react';
 import ViewAll from '../ViewAll'
 import './style.css'
 
@@ -7,8 +7,10 @@ const Title = ({ titleType='h2', titleText ,showViewAll = false }) => {
     return(
         
         <div className={`title-${showViewAll}`} >
-            {React.createElement(titleType, {className: 'title-h2'}, titleText)}
-            <div className="title-line"></div>
+            <div className='title-container'>
+                {React.createElement(titleType, {className: 'title-h2'}, titleText)}
+                <div className="title-line"></div>
+            </div>
             {showViewAll && <ViewAll />}
         </div>
     )

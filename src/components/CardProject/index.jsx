@@ -28,7 +28,7 @@ const CardProject = ({ title, description, technologies, githubUrl, imageUrl, im
             <div className='card-project__header'>
                 <Picture 
                     className='card-project__header__image'
-                    imageSrc={validImageUrl}
+                    imageUrl={validImageUrl}
                     imageAlt={imageAlt} />
             </div>
             <div className='card-project__stack'>

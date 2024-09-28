@@ -43,7 +43,7 @@
   right: 150px;
   width: 84px;
   height: 84px;
-  background-image: url(/src/components/IntroBanner/assets/dots.svg);
+  background-image: url(/src/components/ProfileBanner/assets/dots.svg);
   background-repeat: no-repeat;
   background-size: auto;
   z-index: -1;

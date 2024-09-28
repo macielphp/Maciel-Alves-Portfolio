@@ -1,5 +1,6 @@
 .view-all{
-    margin-left: 50%;
+    /* margin-left: 40%; */
+    display: block;
 }
 .view-all__button{
     border: none;
@@ -7,9 +8,4 @@
     font-size: 16px;
     font-weight: 600;
     background-color: inherit;
-    
-}
-.view-all__button::after{
-    content: "";
-    background-image: url();
 }

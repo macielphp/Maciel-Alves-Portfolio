@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+/* eslint-disable react/prop-types */
 import { styled } from '@mui/material/styles';
 
 const StyledImage = styled('img')({
@@ -9,16 +9,10 @@ const StyledImage = styled('img')({
 })
 
 
-const Picture = ({ className, imageSrc, imageAlt }) => {
+const Picture = ({ className, imageUrl, imageAlt }) => {
     return(
-        <StyledImage className={className} src={imageSrc} alt={imageAlt}/>
+        <StyledImage className={className} src={imageUrl} alt={imageAlt}/>
     )
-}
-
-Picture.propTypes = {
-    className: PropTypes.string,
-    imageSrc: PropTypes.string.isRequired,
-    imageAlt: PropTypes.string.isRequired,
 }
 
 export default Picture
