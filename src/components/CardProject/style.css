@@ -1,4 +1,4 @@
-.card-roject {
+.card-project {
   background-color: inherit;
   border: 1px solid var(--gray);
   width: 331px;
@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
 }
-.card-roject .card-project__stack {
+.card-project .card-project__stack {
   border-width: 1px;
   border-style: none none solid none;
   border-color: var(--gray);
@@ -15,24 +15,24 @@
   gap: 0.5em;
   flex-wrap: wrap;
 }
-.card-roject .card-project__stack .card-project__stack__tech {
+.card-project .card-project__stack .card-project__stack__tech {
   font-family: var(--font-family);
   color: var(--gray);
   font-size: 16px;
 }
-.card-roject .card-project__body {
+.card-project .card-project__body {
   padding: 1em;
   gap: 1em;
   display: flex;
   flex-direction: column;
 }
-.card-roject .card-project__body h3 {
+.card-project .card-project__body h3 {
   color: var(--white);
   font-family: var(--font-family);
   font-size: 24px;
   font-weight: 600;
 }
-.card-roject .card-project__body p {
+.card-project .card-project__body p {
   padding-right: 1em;
   font-family: var(--font-family);
   color: var(--gray);

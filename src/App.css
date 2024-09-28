@@ -15,3 +15,53 @@
     flex-direction: column;
     align-items: flex-start;
 }
+.section-skills{
+    position: relative;
+    padding: 2em 0;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 1em;  */
+}
+
+.section-skills div:nth-of-type(1){
+    flex-basis: 40%; 
+    position: relative;
+    display: flex;
+}
+.section-skills div:nth-of-type(1) .center-images{
+    align-self: self-end;
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    width: 350px;
+    height: 350px;
+    background-image: url(/public/assets/dots.svg),
+                        url(/public/assets/dots.svg),
+                        url(/public/assets/rectangle.svg),
+                        url(/public/assets/rectangle.svg),
+                        url(/public/assets/rectangles.svg);
+
+    background-repeat: no-repeat;
+    background-size: 63px 63px,
+                        63px 63px,
+                        86px 86px,
+                        52px 52px,
+                        113px 113px;
+    background-position: top center,
+                            center right,
+                            center left,
+                            top right,
+                            bottom center;
+    color: var(--white);
+
+}
+
+.section-skills div:nth-of-type(2){
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7em;
+    flex-basis: 60%;
+    align-items: flex-start;
+}

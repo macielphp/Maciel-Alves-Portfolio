@@ -6,6 +6,7 @@ import Quote from './components/Quote';
 import Title from './components/Title';
 import CardProject from './components/CardProject';
 import './App.css'
+import SkillCard from './components/SkillCard';
 
 
 
@@ -15,9 +16,10 @@ function App() {
   const [profile, setProfile] = useState({})
   const [quote, setQuote] = useState([])
   const [about, setAbout] = useState([])
+  const [skills, setSkills] = useState([])
 
   useEffect(() => {
-    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/621780de918d9798477696ca974e32006d0bd5ed/gistfile1.txt';
+    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/5bd3a6f7277ec2c34d35527ff8a900110a1ddd31/gistfile1.txt';
   
     fetch(gistUrl)
       .then(response => response.text())
@@ -51,6 +53,7 @@ function App() {
               imageAlt: 'Texto alternativo não disponível'
             });
           }
+          setSkills(data.skills || []);
 
         } catch (error) {
           console.error('Erro ao fazer o parse do JSON:', error);
@@ -77,8 +80,7 @@ function App() {
         author={quote.author}
       />
       
-      <Title titleType='h2' titleText='project' showViewAll='true' />
-
+      <Title titleType='h2' titleText='projects' showViewAll='true' />
       <section className='section'>
         {projects.map((project, index) => (
           <CardProject
@@ -93,11 +95,28 @@ function App() {
           />
         ))}
       </section>
+      <Title titleType='h2' titleText='skills' />
+      <section className='section-skills'>
+        <div>
+          <div className="center-images"></div>
+        </div>
+        <div>
+          {skills.map((skill, index) => (
+            <SkillCard
+              key={index}
+              titleText={skill.title}
+              skills={skill.skills}
+            />
+          ))}
+        </div>
+      </section>
+
+      <Title titleType='h2' titleText='about-me'/>
       <section className='section-p'>
-        <Title titleType='h2' titleText='about-me'/>
         <ProfileBanner
           description={about.professionalSummary}
-          imageUrl="public/beautiful-office-space-cartoon-style.jpg"
+          imageUrl={"../beautiful-office-space-cartoon-style.jpg"}
+          imageAlt="AI Image generated and downloaded from Freepick"
           callToActButtonText={'Read More'}
           borderColor={'var(--primary)'}
           ancorButtonTo={'https://www.youtube.com/@MultiplyWithMaciel'}

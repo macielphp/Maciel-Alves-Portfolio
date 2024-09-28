@@ -6,7 +6,15 @@ import AncorButton from '../AncorButton';
 import { GoCodeSquare } from "react-icons/go";
 import defaultImage from './assets/default-image.png'
 
-const CardProject = ({ title, description, technologies, githubUrl, imageUrl, imageAlt }) => {
+
+const CardProject = ({ 
+    title, 
+    description, 
+    technologies, 
+    githubUrl, 
+    imageUrl, 
+    imageAlt,
+}) => {
     const [validImageUrl, setValidImageUrl] = useState(defaultImage)
 
     useEffect(() => {
@@ -24,7 +32,7 @@ const CardProject = ({ title, description, technologies, githubUrl, imageUrl, im
     })
 
     return(
-        <div className='card-roject'>
+        <div className='card-project'>
             <div className='card-project__header'>
                 <Picture 
                     className='card-project__header__image'
