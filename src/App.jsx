@@ -9,6 +9,7 @@ import './App.css'
 import SkillCard from './components/SkillCard';
 import ContactBox from './components/ContactBox';
 import Paragraph from './components/Paragraph';
+import Footer from './components/Footer';
 
 
 
@@ -147,11 +148,12 @@ function App() {
         <ContactBox
           titleType="h3"
           titleSize="16px"
-          titleText="Messega/call me here!"
+          titleText="Message me here!"
           emailTo={contact.emailTo}
           emailAddress={contact.emailAddress}
         />
       </section>
+      <Footer />
     </>
   )
 }
