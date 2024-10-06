@@ -7,6 +7,9 @@ import Title from './components/Title';
 import CardProject from './components/CardProject';
 import './App.css'
 import SkillCard from './components/SkillCard';
+import ContactBox from './components/ContactBox';
+import Paragraph from './components/Paragraph';
+
 
 
 
@@ -17,9 +20,10 @@ function App() {
   const [quote, setQuote] = useState([])
   const [about, setAbout] = useState([])
   const [skills, setSkills] = useState([])
+  const [contact, setContact] = useState([])
 
   useEffect(() => {
-    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/5bd3a6f7277ec2c34d35527ff8a900110a1ddd31/gistfile1.txt';
+    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/944dae7892d79d3c426458ee907e96e70d683abb/gistfile1.txt';
   
     fetch(gistUrl)
       .then(response => response.text())
@@ -54,6 +58,17 @@ function App() {
             });
           }
           setSkills(data.skills || []);
+
+          if (data.contact && data.contact.length > 0){
+            setContact(data.contact[0]);
+          } else{
+            console.log('No contact info was found.');
+            setContact({ 
+              paragraphText: "contact phrase.",
+              emailTo: "mailto:emailaddress@gmail.com",
+              emailAddress: "emailaddress@gmail.com"
+             })
+          }
 
         } catch (error) {
           console.error('Erro ao fazer o parse do JSON:', error);
@@ -112,6 +127,7 @@ function App() {
       </section>
 
       <Title titleType='h2' titleText='about-me'/>
+    
       <section className='section-p'>
         <ProfileBanner
           description={about.professionalSummary}
@@ -123,7 +139,19 @@ function App() {
         />
         
       </section>
-   
+      <Title titleType='h2' titleText='contact-me'/>
+      <section className="section-p">
+        <Paragraph pSize="16px" pColor="var(--gray)" pFontFamily="var(--font-family)">
+          {contact.paragraphText}
+        </Paragraph>
+        <ContactBox
+          titleType="h3"
+          titleSize="16px"
+          titleText="Messega/call me here!"
+          emailTo={contact.emailTo}
+          emailAddress={contact.emailAddress}
+        />
+      </section>
     </>
   )
 }

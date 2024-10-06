@@ -12,8 +12,10 @@
     max-width: 90%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 0px;
 }
 .section-skills{
     position: relative;
@@ -37,11 +39,11 @@
     margin: 0 auto;
     width: 350px;
     height: 350px;
-    background-image: url(/public/assets/dots.svg),
-                        url(/public/assets/dots.svg),
-                        url(/public/assets/rectangle.svg),
-                        url(/public/assets/rectangle.svg),
-                        url(/public/assets/rectangles.svg);
+    background-image: url(/assets/dots.svg),
+                        url(/assets/dots.svg),
+                        url(/assets/rectangle.svg),
+                        url(/assets/rectangle.svg),
+                        url(/assets/rectangles.svg);
 
     background-repeat: no-repeat;
     background-size: 63px 63px,

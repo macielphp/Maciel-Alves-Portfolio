@@ -6,7 +6,6 @@ import AncorButton from '../AncorButton';
 const ProfileBanner = ({ title, description, callToActButtonText, imageUrl, imageAlt, borderColor, ancorButtonTo  }) => {
     return (
         <section className="profile-banner">
-            
             <div className="profile-banner__text-content">
                 <h1 className="text-content__title">
                    <span className='title__highlight'>{title}</span>
@@ -19,7 +18,6 @@ const ProfileBanner = ({ title, description, callToActButtonText, imageUrl, imag
                     {callToActButtonText}
                 </AncorButton>
             </div>
-
             <div className="profile-banner__image-content">
                 <div className='background-dots'></div>
                 <Picture 
