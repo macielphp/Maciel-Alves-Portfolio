@@ -4,6 +4,9 @@ import styled from 'styled-components'
 
 const HeaderStyled = styled.header`
 .header{
+    position: fixed;
+    z-index: 3;
+    background-color: var(--background);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
