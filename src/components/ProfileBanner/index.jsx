@@ -10,7 +10,6 @@ const ProfileBanner = ({ title, description, callToActButtonText, imageUrl, imag
                 <h1 className="text-content__title">
                    <span className='title__highlight'>{title}</span>
                 </h1>
-                
                 <p className="text-content__description">
                     {description}
                 </p>
