@@ -3,6 +3,7 @@ import LangSwitcher from '../LangSwitcher'
 import styled from 'styled-components'
 import { useState } from 'react';
 import {FiMenu, FiX} from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const HeaderStyled = styled.header`
     position: fixed;
@@ -120,10 +121,10 @@ const Header = () => {
             <span className="header__name">Maciel A. Santos</span>
             <ul className="header__list">
                 <li className="header__list__item">
-                    <a href="#">Home</a>
+                    <Link to="/">home</Link>
                 </li>
                 <li className="header__list__item">
-                    <a href="#">works</a>
+                    <Link to="/works">works</Link>
                 </li>
                 <li className="header__list__item">
                     <a href="#">about-me</a>

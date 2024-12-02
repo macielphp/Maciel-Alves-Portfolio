@@ -11,9 +11,6 @@ import ContactBox from './components/ContactBox';
 import Paragraph from './components/Paragraph';
 import Footer from './components/Footer';
 
-
-
-
 function App() {
   
   const [projects, setProjects] = useState([])
