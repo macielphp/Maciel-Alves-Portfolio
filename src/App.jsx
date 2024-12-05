@@ -93,7 +93,7 @@ function App() {
         author={quote.author}
       />
       
-      <Title titleType='h2' titleText='projects' showViewAll='true' />
+      <Title titleType='h2' titleText='projects' showViewAll='true' asideLine='true'/>
       <section className='section'>
         {projects.map((project, index) => (
           <CardProject
@@ -108,7 +108,7 @@ function App() {
           />
         ))}
       </section>
-      <Title titleType='h2' titleText='skills' />
+      <Title titleType='h2' titleText='skills' asideLine='true'/>
       <section className='section-skills'>
         <div>
           <div className="center-images"></div>
@@ -124,7 +124,7 @@ function App() {
         </div>
       </section>
 
-      <Title titleType='h2' titleText='about-me'/>
+      <Title titleType='h2' titleText='about-me' asideLine='true'/>
     
       <section className='section-p'>
         <ProfileBanner
@@ -137,7 +137,7 @@ function App() {
         />
         
       </section>
-      <Title titleType='h2' titleText='contact-me'/>
+      <Title titleType='h2' titleText='contact-me' asideLine='true'/>
       <section className="section-p">
         <Paragraph pSize="16px" pColor="var(--gray)" pFontFamily="var(--font-family)">
           {contact.paragraphText}

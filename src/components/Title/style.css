@@ -19,18 +19,18 @@
     align-items: center;
     /* justify-content: flex-start; */
 }
-.title-h2{
+.title-h{
     font-size: 32px;
     font-weight: 600;
     color: var(--white);
     font-family: var(--font-family);
 }
-.title-h2::before{
-    content: "#";
+.title-presymbol{
     color: var(--primary);
-    
+    margin-right: 8px;
 }
-.title-line{
+
+.title-asideline-true{
     margin-left: 16px;
     height: 2px;
     width: 33%;

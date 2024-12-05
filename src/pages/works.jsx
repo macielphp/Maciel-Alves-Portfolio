@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Header from '../components/Header'
-import PagesTitle from '../components/PagesTitle';
+import Title from '../components/Title';
 const WorksStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,6 +11,7 @@ const MainStyled = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 120px;
 `
 
 function Works() {
@@ -18,7 +19,10 @@ function Works() {
     <WorksStyled>
        <Header />
        <MainStyled>
-        <PagesTitle title="projects" />
+        <Title titleType="h2"
+          titleText="Works"
+          preSymbol="/"
+          />
        </MainStyled>
 
     </WorksStyled>
