@@ -33,7 +33,6 @@
   margin-bottom: 1em;
 }
 .profile-banner .profile-banner__image-content {
-  margin-top: 25px;
   flex: 1;
   position: relative;
   z-index: 1;

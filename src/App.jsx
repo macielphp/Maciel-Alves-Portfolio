@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/944dae7892d79d3c426458ee907e96e70d683abb/gistfile1.txt';
   
-    fetch(gistUrl)
+    fetch(gistUrl)  
       .then(response => response.text())
       .then(text => {
         try {

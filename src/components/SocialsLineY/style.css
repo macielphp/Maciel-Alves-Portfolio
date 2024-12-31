@@ -1,8 +1,8 @@
 .SocialsLineY {
   position: fixed;
   top: 0px;
-  left: 60px;
-  z-index: 0;
+  left: 40px;
+  z-index: 100;
   background-image: url("./assets/vertical-line.svg");
   background-position: top;
   background-repeat: no-repeat;
