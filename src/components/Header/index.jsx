@@ -127,7 +127,7 @@ const Header = () => {
                     <Link to="/works">works</Link>
                 </li>
                 <li className="header__list__item">
-                    <a href="#">about-me</a>
+                    <Link to="/aboutme">about-me</Link>
                 </li >
                 <li className="header__list__item">
                     <a href="#">contacts</a>
