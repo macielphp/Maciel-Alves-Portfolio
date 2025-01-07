@@ -1,10 +1,10 @@
-/* eslint-disable react-refresh/only-export-components */
 import styled from 'styled-components'
 import Header from '../components/Header'
 import SocialsLineY from '../components/SocialsLineY';
 import Title from '../components/Title';
 import Footer from '../components/Footer';
-
+import SkillCard from '../components/SkillCard';
+import { useData } from '../DataContext';
 
 
 const AboutmeStyled = styled.div`
@@ -21,15 +21,22 @@ const MainStyled = styled.main`
     width: 100%;
 `
 function AboutMe(){
+    const { skills } = useData();
     return (
         <AboutmeStyled>
             <Header />
             <SocialsLineY />
             <MainStyled>
-                <Title titleType="h2"
-                        titleText="About-me"
-                        preSymbol="/"
-                        />
+                <Title titleType="h2" titleText="About-me" preSymbol="/"/>
+                <section className='section-skills'>
+                    <div>
+                        <div className="center-images"></div>
+                    </div>
+                    <div>
+                        {skills.map((skill, index) => (
+                            <SkillCard key={index} titleText={skill.title} skills={skill.skills}/>))}
+                    </div>
+                </section>
             </MainStyled>
             <Footer />
         </AboutmeStyled>
