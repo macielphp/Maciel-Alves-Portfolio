@@ -3,7 +3,6 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Works from './pages/works.jsx'
-import AboutMe from './pages/aboutme.jsx'
 const root = document.getElementById('root');
 import { DataProvider } from './DataContext.jsx'
 
@@ -13,7 +12,6 @@ ReactDOM.createRoot(root).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/works" element={ <Works /> } />
-        <Route path="/aboutme" element={ <AboutMe /> } />
       </Routes>
     </BrowserRouter>
   </DataProvider>

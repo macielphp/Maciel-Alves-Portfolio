@@ -126,12 +126,6 @@ const Header = () => {
                 <li className="header__list__item">
                     <Link to="/works">works</Link>
                 </li>
-                <li className="header__list__item">
-                    <Link to="/aboutme">about-me</Link>
-                </li >
-                <li className="header__list__item">
-                    <a href="#">contacts</a>
-                </li>
                 <LangSwitcher /> 
             </ul>
             <div className="menu-toggle" onClick={toggleMenu}>
