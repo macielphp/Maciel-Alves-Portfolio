@@ -10,9 +10,10 @@ import SkillCard from './components/SkillCard';
 import ContactBox from './components/ContactBox';
 import Paragraph from './components/Paragraph';
 import Footer from './components/Footer';
+import { useTranslation } from 'react-i18next';
 
 function App() {
-  
+  const { t } = useTranslation();
   const [projects, setProjects] = useState([])
   const [profile, setProfile] = useState({})
   const [quote, setQuote] = useState([])
@@ -93,7 +94,7 @@ function App() {
         author={quote.author}
       />
       
-      <Title titleType='h2' titleText='projects' showViewAll='true' asideLine='true'/>
+      <Title titleType='h2' titleText={t('projects')} showViewAll='true' asideLine='true'/>
       <section className='section'>
         {projects.map((project, index) => (
           <CardProject
@@ -108,7 +109,7 @@ function App() {
           />
         ))}
       </section>
-      <Title titleType='h2' titleText='skills' asideLine='true'/>
+      <Title titleType='h2' titleText={t('skills')} asideLine='true'/>
       <section className='section-skills'>
         <div>
           <div className="center-images"></div>
@@ -124,7 +125,7 @@ function App() {
         </div>
       </section>
 
-      <Title titleType='h2' titleText='about-me' asideLine='true'/>
+      <Title titleType='h2' titleText={t('about-me')} asideLine='true'/>
     
       <section className='section-p'>
         <ProfileBanner
@@ -137,7 +138,7 @@ function App() {
         />
         
       </section>
-      <Title titleType='h2' titleText='contact-me' asideLine='true'/>
+      <Title titleType='h2' titleText={t('contact-me')} asideLine='true'/>
       <section className="section-p">
         <Paragraph pSize="16px" pColor="var(--gray)" pFontFamily="var(--font-family)">
           {contact.paragraphText}
