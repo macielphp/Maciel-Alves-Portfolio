@@ -5,6 +5,8 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Flag from 'react-world-flags'; // Importa o componente de bandeiras
+import { useTranslation } from 'react-i18next';
+
 
 const LangSwitcher = styled((props) => (
   <Menu
@@ -50,6 +52,11 @@ const LangSwitcher = styled((props) => (
 }));
 
 export default function CustomizedMenus() {
+
+  const { i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  }
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -91,17 +98,17 @@ export default function CustomizedMenus() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={() => changeLanguage('en')} disableRipple>
           <Flag code="GB" style={{ width: 25, marginRight: 10 }} />  ENG
         </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={() => changeLanguage('pt')} disableRipple>
           <Flag code="BR" style={{ width: 25, marginRight: 10 }} /> PT-BR
         </MenuItem>
 
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={() => changeLanguage('es')} disableRipple>
           <Flag code="ES" style={{ width: 25, marginRight: 10 }} /> ESP
         </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={() => changeLanguage('fr')} disableRipple>
           <Flag code="FR" style={{ width: 25, marginRight: 10 }} /> FRA
         </MenuItem>
       </LangSwitcher>
