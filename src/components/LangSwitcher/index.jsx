@@ -1,14 +1,16 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import Flag from 'react-world-flags'; // Importa o componente de bandeiras
+import Flag from 'react-world-flags';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-
-const LangSwitcher = styled((props) => (
+const LangSwitcherStyled = styled((props) => (
   <Menu
     elevation={0}
     anchorOrigin={{
@@ -51,19 +53,22 @@ const LangSwitcher = styled((props) => (
   },
 }));
 
-export default function CustomizedMenus() {
-
-  const { i18n } = useTranslation();
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  }
+const LangSwitcher = ({ language, setLanguage }) => { 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const { t } = useTranslation();
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang)
+    handleClose();
   };
 
   return (
@@ -87,9 +92,9 @@ export default function CustomizedMenus() {
           },
         }}
       >
-      Lang
+      {t('header.language')}
       </Button>
-      <LangSwitcher
+      <LangSwitcherStyled
         id="demo-customized-menu"
         MenuListProps={{
           'aria-labelledby': 'demo-customized-button',
@@ -98,20 +103,22 @@ export default function CustomizedMenus() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={() => changeLanguage('en')} disableRipple>
+        <MenuItem onClick={() => handleLanguageChange('en')}>
           <Flag code="GB" style={{ width: 25, marginRight: 10 }} />  ENG
         </MenuItem>
-        <MenuItem onClick={() => changeLanguage('pt')} disableRipple>
+        <MenuItem onClick={() => handleLanguageChange('pt')}>
           <Flag code="BR" style={{ width: 25, marginRight: 10 }} /> PT-BR
         </MenuItem>
 
-        <MenuItem onClick={() => changeLanguage('es')} disableRipple>
+        <MenuItem onClick={() => handleLanguageChange('es')}>
           <Flag code="ES" style={{ width: 25, marginRight: 10 }} /> ESP
         </MenuItem>
-        <MenuItem onClick={() => changeLanguage('fr')} disableRipple>
+        <MenuItem onClick={() => handleLanguageChange('fr')}>
           <Flag code="FR" style={{ width: 25, marginRight: 10 }} /> FRA
         </MenuItem>
-      </LangSwitcher>
+      </LangSwitcherStyled>
     </div>
   );
-}
+};
+
+export default LangSwitcher;

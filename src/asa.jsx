@@ -12,6 +12,7 @@ import ContactBox from './components/ContactBox';
 import Paragraph from './components/Paragraph';
 import Footer from './components/Footer';
 import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 import imgMaciel from '../public/assets/maciel-picture.png'
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
   useEffect(() => {
     const loadData = async () => {
-      const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/9fcd79baeab0e0a6937e11044bbffcf742bf99c2/gistfile1.txt';
+      const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/bda827faa8626a821ced08f8c28645ff811406b4/gistfile1.txt';
       try {
         const response = await fetch(gistUrl);
         if (!response.ok) {
@@ -139,9 +140,7 @@ function App() {
           <p>No projects available</p>
         )}
       </section>
-
-      <Title titleType='h2' titleText={t('skill')} asideLine='true'/>
-
+      <Title titleType='h2' titleText={t('skills')} asideLine='true'/>
       <section className='section-skills'>
         <div>
           <div className="center-images"></div>

@@ -1,0 +1,13 @@
+{
+    "header":{
+        "home": "Home",
+        "works": "Works",
+        "language": "Language"
+    },
+    "sections": {
+    "project": "Projects",
+    "skill": "Skills",
+    "about-me": "About Me",
+    "contact-me": "Contact Me"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "header":{
+        "home": "Início",
+        "works": "Experiências",
+        "language": "Idioma"
+    },
+    "sections": {
+    "project": "Projetos",
+    "skill": "Habilidades",
+    "about-me": "Sobre mim",
+    "contact-me": "Contate-me"
+    }
+}
