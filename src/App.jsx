@@ -50,11 +50,7 @@ function App() {
           throw new Error(`Failed to parse JSON${e}`);
         }
         const localizedData = data[language] || data['pt']; 
-        // Testes
-        console.log('Fetched Data:', data);
-        console.log('Localized Data:', localizedData);
-        // Testes
-
+     
         if (!localizedData) {
           throw new Error(`No data found for language: ${language}`);
         }
