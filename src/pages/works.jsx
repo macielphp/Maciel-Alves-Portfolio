@@ -4,6 +4,7 @@ import Title from '../components/Title';
 import Footer from '../components/Footer';
 import CardProject from '../components/CardProject';
 import SocialsLineY from '../components/SocialsLineY';
+import { useTranslation } from 'react-i18next';
 
 import FilterBar from '../components/filterBar';
 import { useEffect, useState } from "react";
@@ -23,28 +24,42 @@ const MainStyled = styled.main`
 `
 
 function Works() {
+
+  const { t, i18n } = useTranslation();
+  const savedLanguage = localStorage.getItem("language") || "en";
+  const [language, setLanguage] = useState(savedLanguage);
   const [projects, setProjects] = useState([])
   const [filteredProjects, setFilteredProjects] = useState([])
 
   useEffect(() => {
-    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/944dae7892d79d3c426458ee907e96e70d683abb/gistfile1.txt';
+    i18n.changeLanguage(language);
+    localStorage.setItem("language", language);
+  }, [language, i18n]);
+
+  useEffect(() => {
+    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/79a499e77b55791bba301313e0aa8848e6a5a253/gistfile1.txt';
 
     fetch(gistUrl)
       .then(response => response.text())
       .then(text => {
         try{
           const data = JSON.parse(text);
-          const projectsData = data.projects || [];
+          const localizedData = data[language] || data['pt'];
+          
+          if (localizedData && localizedData.projects) {
+            setProjects(localizedData.projects);
+            setFilteredProjects(localizedData.projects)
+          }
 
-          setProjects(projectsData);
-          setFilteredProjects(projectsData) //Inicialize filtered projects with all projects.
         }
         catch(error) {
           console.error('Erro ao buscar os dados:', error);
         }
       })
       .catch(error => console.error('Erro ao buscar os dados:', error))
-  }, []);
+  }, [language]);
+
+
 
   const handleSearch = (query) => {
     const lowercasedQuery = query.toLowerCase();
@@ -60,11 +75,11 @@ function Works() {
 
   return (
     <WorksStyled>
-       <Header />
+       <Header setLanguage={setLanguage} />
        <SocialsLineY />
        <MainStyled>
         <Title titleType="h2"
-          titleText="Works"
+          titleText={t("titles.work")}
           preSymbol="/"
           />
         <FilterBar handleSearch={handleSearch} />
@@ -75,7 +90,7 @@ function Works() {
               title={project.title}
               description={project.description}
               technologies={project.technologies}
-              githubUrl={project.githubUrl}
+              gitHubUrl={project.gitHubUrl}
               imageUrl={project.imageUrl}
               imageAlt={project.imageAlt}
               borderColor={'var(--gray)'}
