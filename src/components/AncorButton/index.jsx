@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { styled } from '@mui/material/styles';
 
-
 const StyledNavButton = styled('a')(({ borderColor }) => ({
     display: 'flex',
     alignItems: 'center',

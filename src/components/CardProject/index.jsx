@@ -10,7 +10,7 @@ const CardProject = ({
     title, 
     description, 
     technologies = [], // Default to an empty array
-    githubUrl, 
+    gitHubUrl, 
     imageUrl, 
     imageAlt,
 }) => {
@@ -54,7 +54,7 @@ const CardProject = ({
             <div className='card-project__body'>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <AncorButton href={githubUrl} icon={GoCodeSquare} borderColor={'var(--gray)'}>GitHub</AncorButton>
+                <AncorButton href={gitHubUrl} icon={GoCodeSquare} borderColor={'var(--gray)'}>GitHub</AncorButton>
             </div>
         </div>
     );

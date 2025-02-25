@@ -24,9 +24,14 @@ function App() {
   const [contact, setContact] = useState({});
   const [language, setLanguage] = useState('en');
 
+
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language]);
+
   useEffect(() => {
     const loadData = async () => {
-      const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/9fcd79baeab0e0a6937e11044bbffcf742bf99c2/gistfile1.txt';
+      const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/79a499e77b55791bba301313e0aa8848e6a5a253/gistfile1.txt';
       try {
         const response = await fetch(gistUrl);
         if (!response.ok) {
@@ -98,9 +103,7 @@ function App() {
     loadData();
   }, [language]);
 
-  useEffect(() => {
-    i18n.changeLanguage(language);
-  }, [language]);
+
 
   return (
     <>
@@ -120,7 +123,7 @@ function App() {
         author={quote.author || t('quote.author')}
       />
       
-      <Title titleType='h2' titleText={t('project')} showViewAll='true' asideLine='true'/>
+      <Title titleType='h2' titleText={t('titles.project')} showViewAll='true' asideLine='true'/>
       <section className='section'>
         {projects.length > 0 ? (
           projects.map((project, index) => (
@@ -129,7 +132,7 @@ function App() {
               title={project.title}
               description={project.description}
               technologies={project.technologies}
-              githubUrl={project.githubUrl}
+              gitHubUrl={project.gitHubUrl}
               imageUrl={project.imageUrl}
               imageAlt={project.imageAlt}
               borderColor={'var(--gray)'}
@@ -140,7 +143,7 @@ function App() {
         )}
       </section>
 
-      <Title titleType='h2' titleText={t('skill')} asideLine='true'/>
+      <Title titleType='h2' titleText={t('titles.skill')} asideLine='true'/>
 
       <section className='section-skills'>
         <div>
@@ -157,20 +160,20 @@ function App() {
         </div>
       </section>
 
-      <Title titleType='h2' titleText={t('about-me')} asideLine='true'/>
+      <Title titleType='h2' titleText={t('titles.about-me')} asideLine='true'/>
     
       <section className='section-p'>
         <ProfileBanner
           description={about.professionalSummary}
           imageUrl={"../beautiful-office-space-cartoon-style.jpg"}
           imageAlt="AI Image generated and downloaded from Freepick"
-          callToActButtonText={'Read More'}
+          callToActButtonText={t("buttons.read-more")}
           borderColor={'var(--primary)'}
           ancorButtonTo={'https://www.youtube.com/@MultiplyWithMaciel'}
         />
         
       </section>
-      <Title titleType='h2' titleText={t('contact-me')} asideLine='true'/>
+      <Title titleType='h2' titleText={t('titles.contact-me')} asideLine='true'/>
       <section className="section-p">
         <Paragraph pSize="16px" pColor="var(--gray)" pFontFamily="var(--font-family)">
           {contact.paragraphText}
@@ -178,7 +181,7 @@ function App() {
         <ContactBox
           titleType="h3"
           titleSize="16px"
-          titleText="Message me here!"
+          titleText={t("buttons.email")}
           emailTo={contact.emailTo}
           emailAddress={contact.emailAddress}
         />
