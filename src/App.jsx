@@ -22,12 +22,14 @@ function App() {
   const [about, setAbout] = useState({});
   const [skills, setSkills] = useState([]);
   const [contact, setContact] = useState({});
-  const [language, setLanguage] = useState('en');
-
+  const savedLanguage = localStorage.getItem("language") || "en"; 
+  const [language, setLanguage] = useState(savedLanguage);
 
   useEffect(() => {
     i18n.changeLanguage(language);
-  }, [language]);
+    localStorage.setItem("language", language);
+  }, [language, i18n]);
+
 
   useEffect(() => {
     const loadData = async () => {
