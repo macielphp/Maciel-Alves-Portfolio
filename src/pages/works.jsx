@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components'
 import Header from '../components/Header'
 import Title from '../components/Title';
@@ -5,9 +6,9 @@ import Footer from '../components/Footer';
 import CardProject from '../components/CardProject';
 import SocialsLineY from '../components/SocialsLineY';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState, Suspense } from "react";
 
-import FilterBar from '../components/filterBar';
-import { useEffect, useState } from "react";
+const FilterBar = React.lazy(() => import('../components/FilterBar'));
 
 const WorksStyled = styled.div`
   display: flex;
@@ -82,7 +83,9 @@ function Works() {
           titleText={t("titles.work")}
           preSymbol="/"
           />
-        <FilterBar handleSearch={handleSearch} />
+        <Suspense fallback={<div>Loading Filter...</div>}>
+          <FilterBar handleSearch={handleSearch} />
+        </Suspense>
         <section className="section">
           {filteredProjects.map((project, index) => (
             <CardProject

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import styled from 'styled-components';
 import searchIcon from './assets/search-01.svg'
-
+    
 const StyledFilterDiv = styled.div`
     display: flex;
     justify-content: space-between;
@@ -26,6 +26,7 @@ const StyledFilterDiv = styled.div`
 `;
 
 const FilterBar = ({ handleSearch }) => {
+
     return(
         <StyledFilterDiv>
             <input 
