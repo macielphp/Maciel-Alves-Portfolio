@@ -73,8 +73,9 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin: 0 auto;
-        
-
+    }
+    .section-skills__container{
+        justify-content: center;
     }
     .section-skills .section-skills__icons{
         display: none; 

@@ -12,7 +12,7 @@ import ContactBox from './components/ContactBox';
 import Paragraph from './components/Paragraph';
 import Footer from './components/Footer';
 import { useTranslation } from 'react-i18next';
-import imgMaciel from '../public/assets/maciel-picture.png'
+import imgMaciel from './assets/maciel-picture.png'
 
 function App() {
   const { t, i18n } = useTranslation();
