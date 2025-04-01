@@ -1,0 +1,21 @@
+{
+    "header":{
+        "home": "Home",
+        "works": "Works",
+        "language": "Language"
+    },
+    "titles": {
+        "work": "Works",
+        "project": "Projects",
+        "skill": "Skills",
+        "about-me": "About Me",
+        "contact-me": "Contact Me"
+    },
+    "buttons": {
+        "view-all": "View all",
+        "see-less": "See less",
+        "send": "Send",
+        "read-more": "Read more",
+        "email": "Send an e-mail"
+    }
+}

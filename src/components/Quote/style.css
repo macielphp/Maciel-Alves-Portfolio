@@ -1,0 +1,76 @@
+@charset "UTF-8";
+.quote {
+  color: var(--gray);
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  margin: 1em auto;
+  width: 700px;
+}
+.quote .quote__q {
+  width: 100%;
+  border: 2px solid var(--gray);
+  padding: 1em;
+  font-weight: 700;
+  position: relative;
+  align-self: flex-end;
+  text-align: center;
+}
+.quote .quote__q::before {
+  content: "";
+  position: absolute; /* Para garantir que o conteúdo respeite o padding */
+  background-image: url("./assets/aspas.svg");
+  background-position: top; /* Posiciona o ícone um pouco acima e à esquerda */
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta o tamanho do ícone */
+  width: 25px;
+  height: 25px;
+  transform: translate(0%, -40%);
+  top: 0px;
+}
+.quote .quote__author {
+  border: 2px solid var(--gray);
+  padding: 1em;
+  font-weight: 500;
+  position: relative;
+  align-self: flex-end;
+  text-align: center;
+}
+.quote .quote__author::after {
+  content: "";
+  position: absolute; /* Para garantir que o conteúdo respeite o padding */
+  background-image: url("./assets/aspas.svg");
+  background-position: top; /* Posiciona o ícone um pouco acima e à esquerda */
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta o tamanho do ícone */
+  width: 25px;
+  height: 25px;
+  transform: translate(0%, -40%);
+  top: 0px;
+}
+@media (max-width: 768px) {
+  .quote {
+    width: 70%;
+    font-size: 20px;
+  }
+  .quote .quote__q, .quote .quote__author {
+    padding: 0.4em;
+  }
+  .quote .quote__q::before, .quote .quote__author::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 430px) {
+  .quote {
+    font-size: 14px;
+    width: 80%;
+  }
+  .quote .quote__q, .quote .quote__author {
+    padding: 0.6em;
+  }
+  .quote .quote__q::before, .quote .quote__author::after {
+    width: 18px;
+    height: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */

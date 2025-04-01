@@ -1,0 +1,21 @@
+{
+    "header": {
+        "home": "Inicio",
+        "works": "Trabajos",
+        "language": "Idioma"
+    },
+    "titles": {
+        "work": "Trabajos",
+        "project": "Proyectos",
+        "skill": "Habilidades",
+        "about-me": "Sobre mí",
+        "contact-me": "Contáctame"
+    },
+    "buttons": {
+        "view-all": "Ver todo",
+        "see-less": "Ver menos",
+        "send": "Enviar",
+        "read-more": "Leer más",
+        "email": "Enviar un correo"
+    }
+}

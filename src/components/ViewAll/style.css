@@ -1,0 +1,11 @@
+.view-all{
+    /* margin-left: 40%; */
+    display: block;
+}
+.view-all__button{
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    background-color: inherit;
+}
