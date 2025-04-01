@@ -8,7 +8,7 @@ const FooterStyled = styled.footer`
     .FooterStyled__line{
         background-color: var(--gray);
         height: 1px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         width: 100%;
     }
     .FooterStyled__paragraph{
@@ -16,6 +16,12 @@ const FooterStyled = styled.footer`
         color: var(--gray);
         font-weight: 400;
         font-family: var(--font-family);    
+    }
+    @media (max-width: 430px) {
+        padding: .5em 0;
+        .FooterStyled__paragraph{
+            font-size: 14px;
+        }
     }
 
 ` 

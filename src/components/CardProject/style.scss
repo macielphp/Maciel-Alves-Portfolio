@@ -40,3 +40,25 @@
         }
     }
 }
+@media(max-width: 768px){
+    .card-project{
+        width: 178px;
+    }
+    .card-project__stack{
+        display: none !important;
+    }
+    .card-project__body{
+        padding: .3em !important;
+        h3{
+            font-size: 16px !important;
+        }
+        p{
+            display: none !important;
+        }
+    }
+}
+@media(max-width: 430px){
+    .card-project{
+        font-size: 14px;
+    }
+}

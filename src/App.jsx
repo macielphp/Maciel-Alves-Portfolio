@@ -101,7 +101,16 @@ function App() {
     loadData();
   }, [language]);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -115,6 +124,7 @@ function App() {
         imageAlt={profile.imageAlt}
         borderColor={'var(--primary)'}
         ancorButtonTo={'mailto:macielalvescontato@gmail.com'}
+        marginTop="70px"
       />
       <Quote 
         quote={quote.quote || t('quote.quote')}
@@ -144,10 +154,10 @@ function App() {
       <Title titleType='h2' titleText={t('titles.skill')} asideLine='true'/>
 
       <section className='section-skills'>
-        <div>
+        <div className='section-skills__icons'>
           <div className="center-images"></div>
         </div>
-        <div>
+        <div className="section-skills__container">
           {skills.map((skill, index) => (
             <SkillCard
               key={index}
@@ -163,7 +173,8 @@ function App() {
       <section className='section-p'>
         <ProfileBanner
           description={about.professionalSummary}
-          imageUrl={"../beautiful-office-space-cartoon-style.jpg"}
+          // If the riched the 768px in width, so this prop will no longer exist
+          imageUrl={isSmallScreen ? null : "../beautiful-office-space-cartoon-style.jpg"}
           imageAlt="AI Image generated and downloaded from Freepick"
           callToActButtonText={t("buttons.read-more")}
           borderColor={'var(--primary)'}

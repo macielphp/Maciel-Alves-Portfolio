@@ -37,4 +37,27 @@
   font-family: var(--font-family);
   color: var(--gray);
   font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .card-project {
+    width: 178px;
+  }
+  .card-project__stack {
+    display: none !important;
+  }
+  .card-project__body {
+    padding: 0.3em !important;
+  }
+  .card-project__body h3 {
+    font-size: 16px !important;
+  }
+  .card-project__body p {
+    display: none !important;
+  }
+}
+@media (max-width: 430px) {
+  .card-project {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

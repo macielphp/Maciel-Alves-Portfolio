@@ -1,5 +1,4 @@
 .quote {
-    
     color: var(--gray);
     font-size: 24px;
     
@@ -51,5 +50,27 @@
         height: 25px;
         transform: translate(0%, -40%);
         top: 0px;
+    }
+    @media(max-width: 768px) {
+        width: 70%;
+        font-size: 20px;
+        .quote__q, .quote__author{
+            padding: 0.4em;
+        }
+        .quote__q::before, .quote__author::after {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    @media(max-width: 430px){
+        font-size: 14px;
+        width: 80%;
+        .quote__q, .quote__author{
+            padding: 0.6em;
+        }
+        .quote__q::before, .quote__author::after{
+            width: 18px;
+            height: 18px
+        }
     }
 }

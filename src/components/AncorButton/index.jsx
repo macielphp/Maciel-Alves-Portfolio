@@ -18,6 +18,9 @@ const StyledNavButton = styled('a')(({ borderColor }) => ({
     '&:hover': {
         backgroundColor: 'rgba(255, 255, 255, 0.1)',
     },
+    '@media(max-width: 430px)': {
+        fontSize: '15px',
+    }
 }));
 
 const AncorButton = ({ href, icon: Icon, children, borderColor }) => {

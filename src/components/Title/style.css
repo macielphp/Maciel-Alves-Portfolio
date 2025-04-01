@@ -33,8 +33,30 @@
 .title-asideline-true{
     margin-left: 16px;
     height: 2px;
-    width: 33%;
+    width: 43%;
     border:none;
     background-color: var(--primary);
     justify-self: self-start;
+}
+
+@media(max-width: 430px) {
+    .title-true{
+        max-width: 90%;
+    }
+    .title-h{
+        font-size: 20px;
+        width: 70%;
+    }
+    .title-container{
+        width: 100%;
+        padding-left: 1em;
+    }
+    .title-container{
+        width: 60%;
+        
+    }
+    .title-asideline-true{
+        display: none;
+    }
+    
 }

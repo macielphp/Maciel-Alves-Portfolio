@@ -47,4 +47,30 @@
   height: 25px;
   transform: translate(0%, -40%);
   top: 0px;
+}
+@media (max-width: 768px) {
+  .quote {
+    width: 70%;
+    font-size: 20px;
+  }
+  .quote .quote__q, .quote .quote__author {
+    padding: 0.4em;
+  }
+  .quote .quote__q::before, .quote .quote__author::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 430px) {
+  .quote {
+    font-size: 14px;
+    width: 80%;
+  }
+  .quote .quote__q, .quote .quote__author {
+    padding: 0.6em;
+  }
+  .quote .quote__q::before, .quote .quote__author::after {
+    width: 18px;
+    height: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */

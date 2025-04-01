@@ -102,7 +102,8 @@ const HeaderStyled = styled.header`
       display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 430px) {
+    width: 100%;
     padding: 10px 1em;
     .header__logo span {
       font-size: 14px;
@@ -130,7 +131,9 @@ const Header = ({ language, setLanguage }) => {
         <li className="header__list__item">
           <Link to="/works">{t('header.works')}</Link>
         </li>
-        <LangSwitcher language={language} setLanguage={setLanguage} />
+        <li className="header__list__item">
+          <LangSwitcher language={language} setLanguage={setLanguage} />
+        </li>
       </ul>
       <div className="menu-toggle" onClick={toggleMenu}>
         {isOpen ? <FiX /> : <FiMenu />}

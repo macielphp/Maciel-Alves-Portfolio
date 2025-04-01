@@ -1,5 +1,5 @@
 .profile-banner {
-  padding: 2em;
+  padding: 3em 5em;
   background-color: var(--background);
   max-width: 65em;
   margin: 0 auto;
@@ -7,6 +7,15 @@
   flex-wrap: wrap;
   align-items: center;
   position: relative;
+}
+.profile-banner.no-image {
+  justify-content: center;
+  text-align: center;
+}
+.profile-banner.no-image .profile-banner__text-content {
+  max-width: 100%;
+  align-items: center;
+  margin-right: 0;
 }
 .profile-banner .profile-banner__text-content {
   display: flex;
@@ -48,4 +57,57 @@
   background-size: auto;
   z-index: -1;
   color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .profile-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 0rem;
+  }
+  .profile-banner__text-content {
+    max-width: 100%;
+    align-items: center;
+    margin-right: 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .profile-banner__image-content {
+    margin-top: 1em;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  .background-dots {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .profile-banner {
+    font-size: 14px;
+    width: 100%;
+  }
+  .profile-banner.no-image {
+    width: 90%;
+  }
+  .profile-banner .profile-banner__text-content {
+    width: 80%;
+    margin-top: 0;
+    margin-right: 0;
+    align-items: center;
+  }
+  .profile-banner .profile-banner__text-content .text-content__title {
+    font-size: 1.5rem;
+  }
+  .profile-banner .profile-banner__text-content .text-content__description {
+    font-size: 0.9em;
+  }
+  .profile-banner .profile-banner__text-content .background-dots {
+    width: 48px;
+    height: 48px;
+  }
+  .profile-banner .profile-banner__image-content {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */

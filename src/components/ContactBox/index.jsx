@@ -24,6 +24,16 @@ const ContactBoxStyled = styled.div`
         font-weight: regular
     }
   }
+  @media(max-width: 430px){
+    padding: 8px;
+    gap: 6px;
+    .ContactBoxStyled__container{
+      font-size: 14px;
+      .container__email-link{
+        font-size: 14px;
+      }
+    }
+  }
 `;
 
 const ContactBox = ({

@@ -9,14 +9,23 @@
 }
 
 body {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  min-width: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-  background-color: var(--background);
+	/* display: flex; */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	min-height: 100vh;
+	box-sizing: border-box;
+	background-color: var(--background);
+}
+
+@media(max-width: 430px) {
+	body{
+		width: 100%;
+	}
 }
 
 

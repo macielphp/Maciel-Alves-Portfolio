@@ -1,5 +1,5 @@
 .profile-banner {
-    padding: 2em;
+    padding: 3em 5em;
     background-color: var(--background);
     max-width: 65em;
     margin: 0 auto;
@@ -8,6 +8,17 @@
     align-items: center;
     position: relative;
     
+    // If the user does not provide a value to the imageUrl component's prop, so this will be the style applied.
+    &.no-image {
+        justify-content: center;  // Centraliza o texto caso não tenha imagem
+        text-align: center;
+
+        .profile-banner__text-content {
+            max-width: 100%;  
+            align-items: center;
+            margin-right: 0;
+        }
+    }
 
     .profile-banner__text-content {
         display: flex;
@@ -55,8 +66,70 @@
     }
 }
 
+@media (max-width: 768px){
+    .profile-banner{
+        flex-direction: column;
+        text-align: center;
+        padding: 0rem;
+    }
+    .profile-banner__text-content{
+        max-width: 100%;
+        align-items: center;
+        margin-right: 0;
+        display: flex!important;
+        align-items: center !important;
+        justify-content: center!important;
+        
+    }
+    .profile-banner__image-content{
+        margin-top: 1em;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+    .background-dots{
+        display: none;
+    }
+}
+
+@media (max-width: 430px){
+    .profile-banner{
+        font-size: 14px;
+        width: 100%; 
+        &.no-image{
+            width: 90%;
+        }
+        .profile-banner__text-content{
+            width: 80%;
+            margin-top: 0;
+            margin-right: 0;
+            align-items: center;
+            .text-content__title{
+                font-size: 1.5rem;
+                // margin-top:30px;
+            }
+            .text-content__description {
+                font-size: 0.9em;
+            }
+        
+            .background-dots {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .profile-banner__image-content{
+            width: 50%;
+        }
+    }
+}
+// Resposiveness
+
+// 375w
 
 
+// 430
 
+
+// 768
 
 
