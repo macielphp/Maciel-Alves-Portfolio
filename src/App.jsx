@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     const loadData = async () => {
-      const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/79a499e77b55791bba301313e0aa8848e6a5a253/gistfile1.txt';
+      const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/fcb9e961280c9ee28b961fb6928d01fdff6e9f53/gistfile1.txt';
       try {
         const response = await fetch(gistUrl);
         if (!response.ok) {
