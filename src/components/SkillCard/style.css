@@ -32,10 +32,13 @@
 
 @media(max-width: 430px) {
     .skill-card{
-        font-size: 14px;
-        width: 8.5em;
+        font-size: 12px;
+        max-width: 20.5em;
     }
-    .skill-card__skill-container{
-        padding: 0.5em;
+    .skill-container__skills, .skill-card__header{
+        font-size: 12px!important;
+    }
+    .skill-card .skill-card__header, .skill-card__skill-container{
+        padding: .9rem !important;
     }
 }
