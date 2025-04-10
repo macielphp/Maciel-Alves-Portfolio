@@ -13,6 +13,7 @@ import Paragraph from './components/Paragraph';
 import Footer from './components/Footer';
 import { useTranslation } from 'react-i18next';
 import imgMaciel from './assets/maciel-picture.png'
+import GIST_URL from './config/gistConfig.js'
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -33,7 +34,7 @@ function App() {
 
   useEffect(() => {
     const loadData = async () => {
-      const gistUrl = import.meta.env.VITE_GIST_URL;
+      const gistUrl = GIST_URL;
       try {
         const response = await fetch(gistUrl);
         if (!response.ok) {

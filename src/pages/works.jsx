@@ -7,6 +7,7 @@ import CardProject from '../components/CardProject';
 import SocialsLineY from '../components/SocialsLineY';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState, Suspense } from "react";
+import GIST_URL from '../config/gistConfig.js'
 
 const FilterBar = React.lazy(() => import('../components/FilterBar'));
 
@@ -38,7 +39,7 @@ function Works() {
   }, [language, i18n]);
 
   useEffect(() => {
-    const gistUrl = import.meta.env.VITE_GIST_URL;
+    const gistUrl = GIST_URL;
 
     fetch(gistUrl)
       .then(response => response.text())
