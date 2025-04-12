@@ -33,7 +33,7 @@
   color: var(--white);
 }
 .profile-banner .profile-banner__text-content .text-content__title .title__highlight {
-  color: var(--primary) !important;
+  color: var(--white) !important;
 }
 .profile-banner .profile-banner__text-content .text-content__description {
   color: var(--gray);
