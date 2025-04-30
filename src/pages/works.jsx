@@ -7,6 +7,7 @@ import CardProject from '../components/CardProject';
 import SocialsLineY from '../components/SocialsLineY';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState, Suspense } from "react";
+import GIST_URL from '../config/gistConfig.js'
 
 const FilterBar = React.lazy(() => import('../components/FilterBar'));
 
@@ -38,7 +39,7 @@ function Works() {
   }, [language, i18n]);
 
   useEffect(() => {
-    const gistUrl = 'https://gist.githubusercontent.com/macielphp/d17682882ed9b54e077fedaf2e4ea059/raw/79a499e77b55791bba301313e0aa8848e6a5a253/gistfile1.txt';
+    const gistUrl = GIST_URL;
 
     fetch(gistUrl)
       .then(response => response.text())

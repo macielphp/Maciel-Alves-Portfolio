@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 :root {
-  --background: #070d16;
-  --gray: #ABB2BF;
-  --white: #FFF;
-  --primary: #C778DD;
+	--background: #131213;
+	--gray: #e2e1e1;
+	--white: #f9f9f9;
+	--primary: #814be0;
   --font-family: "Fira Code", monospace;
 }
 

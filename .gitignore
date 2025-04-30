@@ -1,3 +1,6 @@
+ HEAD
+node_modules
+
 # Logs
 logs
 *.log
@@ -24,3 +27,5 @@ dist-ssr
 *.sw?
 
 .vercel
+v2.0
+
